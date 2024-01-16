@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.*;
 
 public class Main {
@@ -11,15 +10,19 @@ public class Main {
 /*take an input string, split it into an array of words using spaces as separators
  and initialize an empty list to store words with repeated characters */
     public static String shuffleCharactersAndCombineWords(String inputString) {
-        List<String> wordsWithRepeatedCharacters = new ArrayList<>();
+        ArrayList<String> wordsWithRepeatedCharacters = new ArrayList<>();
         String[] words = inputString.split("\\s+");
-/*count is initialized to 0 to keep track of the number of words with repeated characters. The loop iterates over each word in the array,
-and for words with repeated characters it converts the word into a char array and then into a list of characters.*/
+
+/*count is initialized to 0 to keep track of the number of words with repeated characters.
+The loop iterates over each word in the array,
+and for words with repeated characters it converts the word into a char array
+and then into a list of characters.*/
+
         int count = 0; // Counter to limit the number of words with repeated characters
         for (String word : words) {
             if (hasRepeatedCharacters(word)) {
                 char[] charArray = word.toCharArray();
-                List<Character> charList = new ArrayList<>();
+                ArrayList<Character> charList = new ArrayList<>();
                 for (char c : charArray) {
                     charList.add(c);
                 }
@@ -43,7 +46,7 @@ and for words with repeated characters it converts the word into a char array an
     }
 //checks if a word has repeated characters and adds them into the set.
     public static boolean hasRepeatedCharacters(String word) {
-        Set<Character> uniqueCharacters = new HashSet<>();
+        HashSet<Character> uniqueCharacters = new HashSet<>();
 
         for (char c : word.toCharArray()) {
             if (!uniqueCharacters.add(c)) {
