@@ -7,7 +7,6 @@ class Male extends Personnel {
     public Male(String departmentName, String personnelName, int birthDate, String teamLeadName) {
         super(departmentName, personnelName, birthDate, teamLeadName);
     }
-
     // method to calculate retirement age for males
     public void calculateRetirementAge(int birthDate, int retirementAge) {
         this.birthDate = birthDate;

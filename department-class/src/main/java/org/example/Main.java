@@ -53,7 +53,7 @@ public class Main {
 
         // Display and modify the team lead for the IT Department
         informationTech.displayTeamLead();
-        itTeamLead.modifyTeamLead(newItTeamLead.personnelName);
+        itTeamLead.setTeamLeadName(newItTeamLead.personnelName);
 
         //Display department
         newItTeamLead.displayDepartment();

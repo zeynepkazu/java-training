@@ -23,7 +23,7 @@ class Department {
     }
 
     // Method to modify the team lead
-    public void modifyTeamLead (String newTeamLeadName) {
+    public void setTeamLeadName (String newTeamLeadName) {
         System.out.println("Please update the team Lead of" + " " + departmentName + " " + "to: " + newTeamLeadName);
     }
 
