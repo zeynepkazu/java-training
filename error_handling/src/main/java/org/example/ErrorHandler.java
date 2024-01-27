@@ -4,7 +4,7 @@ public class ErrorHandler {
     // Method that performs arithmetic operations on two integers
     public int performArithmeticOperation(int operand1, int operand2, String operation) {
         try {
-            int result = 0;
+            int result;
 
             switch (operation) {
                 case "add":
