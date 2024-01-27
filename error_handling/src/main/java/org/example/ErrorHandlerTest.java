@@ -17,7 +17,6 @@ public class ErrorHandlerTest {
             int result3 = operationHandler.performArithmeticOperation(7, 2, "power");
             System.out.println("Unsupported operation result: " + result3); // This won't be printed due to the exception
         }
-
     public static void main(String[] args) {
         testArithmeticOperations();
     }
