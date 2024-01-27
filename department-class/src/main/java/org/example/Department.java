@@ -57,7 +57,6 @@ class Department {
             {
                 System.out.println("Employees of the"+ " " + departmentName + " " + "are:" + " " + personnels);
             }
-
         }
     }
     // Declaring a TaskList class to add, remove, mark completed and display tasks of a personnel
@@ -102,5 +101,4 @@ class Department {
     public void displayTeamLead() {
         System.out.println("Team Lead of" + " " + departmentName + " " + "is" + " " + teamLeadName );
     }
-
 }

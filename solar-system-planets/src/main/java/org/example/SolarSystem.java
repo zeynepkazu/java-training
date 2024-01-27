@@ -27,15 +27,12 @@ public class SolarSystem {
         public int getProximityOrder() {
             return proximityOrder;
         }
-
         public double getDistanceToSun() {
             return distanceToSun;
         }
-
         public double getRadius() {
             return radius;
         }
-
         public double getOrbitalPeriod() {
             return orbitalPeriod;
         }
