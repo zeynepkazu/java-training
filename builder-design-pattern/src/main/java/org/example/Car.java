@@ -8,7 +8,7 @@ public class Car {
     private int horsepower;
 
     // Private constructor to be used to create a new object
-    private Car(Builder builder) {
+    private Car(CarBuilder builder) {
         this.brand = builder.brand;
         this.model = builder.model;
         this.year = builder.year;
@@ -38,34 +38,34 @@ public class Car {
     }
 
     // Builder for constructing the Car object
-    public static class Builder {
+    public static class CarBuilder {
         // Required parameters
         private String brand;
         private String model;
 
-        // Optional parameters with default values
-        private int year = 2022;  // Default year
-        private String color = "Black";  // Default color
-        private int horsepower = 150;  // Default horsepower
+        // Optional parameters
+        private int year;
+        private String color;
+        private int horsepower;
 
         // Constructor with required parameters
-        public Builder(String brand, String model) {
+        public CarBuilder (String brand, String model) {
             this.brand = brand;
             this.model = model;
         }
 
         // Methods for setting optional parameters
-        public Builder year(int year) {
+        public CarBuilder year(int year) {
             this.year = year;
             return this;
         }
 
-        public Builder color(String color) {
+        public CarBuilder color(String color) {
             this.color = color;
             return this;
         }
 
-        public Builder horsepower(int horsepower) {
+        public CarBuilder horsepower(int horsepower) {
             this.horsepower = horsepower;
             return this;
         }

@@ -3,9 +3,9 @@ package org.example;
 public class CarUsage {
     public static void main(String[] args) {
         // Using the builder to construct a new Car object
-        Car car = new Car.Builder("Toyota", "Camry")
+        Car car = new Car.CarBuilder("Opel", "Corsa")
                 .year(2023)
-                .color("Blue")
+                .color("Orange")
                 .horsepower(200)
                 .build();
 
