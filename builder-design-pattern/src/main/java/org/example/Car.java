@@ -43,10 +43,10 @@ public class Car {
         private String brand;
         private String model;
 
-        // Optional parameters
-        private int year;
-        private String color;
-        private int horsepower;
+        // Optional parameters & their default values
+        private int year = 2010;
+        private String color = "White";
+        private int horsepower = 200;
 
         // Constructor with required parameters
         public CarBuilder (String brand, String model) {

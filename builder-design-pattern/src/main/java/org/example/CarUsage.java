@@ -6,7 +6,7 @@ public class CarUsage {
         Car car = new Car.CarBuilder("Opel", "Corsa")
                 .year(2023)
                 .color("Orange")
-                .horsepower(200)
+                .horsepower(300)
                 .build();
 
         // Displaying the details of the final product
