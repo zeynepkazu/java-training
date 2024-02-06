@@ -45,7 +45,7 @@ public class Car {
 
         // Optional parameters & their default values
         private int year = 2010;
-        private String color = "White";
+        private String color;
         private int horsepower = 200;
 
         // Constructor with required parameters
