@@ -18,7 +18,7 @@ public class LocalDBConnection {
             //DB operations
             handle.execute("CREATE TABLE IF NOT EXISTS person (id serial PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), age INT)");
             System.out.println("Table 'person' created successfully.");
-            // Check if the values exist in the table before inserting
+            // Check if the values exist in the table before inserting & insert items if not exist
             if (!isRecordExist(handle, "John", "Doe", 32)) {
                 handle.execute("INSERT INTO person (name, last_name, age) VALUES (?, ?, ?)", "John", "Doe", 32);
             }
@@ -37,7 +37,7 @@ public class LocalDBConnection {
 
             System.out.println("Items inserted into the table.");
 
-            //Get user with name Mary
+            //Executing simple queries
             String result = handle.createQuery("SELECT name FROM person WHERE id = :id")
                     .bind("id", "39")
                     .mapTo(String.class)
