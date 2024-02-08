@@ -13,7 +13,7 @@ public class JavaStream {
     }
 
     public static void main(String[] args) {
-        // Finding element 7 in the list
+        // Finding element "apple" in the list
         List <String> fruitList = Arrays.asList("apple", "banana", "orange");
         String stringResult = findElement(fruitList, "apple");
 
