@@ -1,78 +1,60 @@
 package org.example;
 
 public class Car {
-    private String brand;
-    private String model;
-    private int year;
-    private String color;
-    private int horsepower;
+    protected String brand;
+    protected String model;
+    protected int year;
+    protected String color;
+    protected int horsepower;
 
-    // Private constructor to be used to create a new object
-    private Car(CarBuilder builder) {
-        this.brand = builder.brand;
-        this.model = builder.model;
-        this.year = builder.year;
-        this.color = builder.color;
-        this.horsepower = builder.horsepower;
-    }
-
-    // Getters for the attributes
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getHorsepower() {
-        return horsepower;
-    }
-
-    // Builder for constructing the Car object
-    public static class CarBuilder {
-        // Required parameters
+    public static final class CarBuilder {
         private String brand;
         private String model;
-
-        // Optional parameters & their default values
-        private int year = 2010;
+        private int year;
         private String color;
-        private int horsepower = 200;
+        private int horsepower;
 
-        // Constructor with required parameters
-        public CarBuilder (String brand, String model) {
-            this.brand = brand;
-            this.model = model;
+        public CarBuilder() {
         }
 
-        // Methods for setting optional parameters
-        public CarBuilder year(int year) {
+        public static CarBuilder aCar() {
+            return new CarBuilder();
+        }
+
+        public CarBuilder withBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public CarBuilder withModel(String model) {
+            this.model = model;
+            return this;
+        }
+
+        public CarBuilder withYear(int year) {
             this.year = year;
             return this;
         }
 
-        public CarBuilder color(String color) {
+        public CarBuilder withColor(String color) {
             this.color = color;
             return this;
         }
 
-        public CarBuilder horsepower(int horsepower) {
+        public CarBuilder withHorsepower(int horsepower) {
             this.horsepower = horsepower;
             return this;
         }
 
-        // Method to build the Car object
         public Car build() {
-            return new Car(this);
+            Car car = new Car();
+            car.horsepower = this.horsepower;
+            car.model = this.model;
+            car.brand = this.brand;
+            car.color = this.color;
+            car.year = this.year;
+            return car;
         }
+
     }
 }
