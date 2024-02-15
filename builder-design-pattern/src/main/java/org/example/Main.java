@@ -5,7 +5,7 @@ public class Main {
         // Using the builder to construct a new Car object
         Car car = Car.CarBuilder.aCar()
                 .withBrand("Opel")
-                .withModel("Cors")
+                .withModel("Corsa")
                 .withYear(2023)
                 .withColor("Orange")
                 .withHorsepower(300)
