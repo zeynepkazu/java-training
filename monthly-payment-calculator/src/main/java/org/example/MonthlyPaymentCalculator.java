@@ -1,7 +1,7 @@
 package org.example;
 
 public class MonthlyPaymentCalculator {
-    static int calculatePayment (int daysWorked, int paymentPerDay) {
+    public static int calculatePayment (int daysWorked, int paymentPerDay) {
         int monthlyNetPayment = (paymentPerDay * daysWorked);
         //To calculate monthly pay and add bonus if there is any
         int monthlyTotalPayment = (daysWorked <= 25) ? (monthlyNetPayment) : (monthlyNetPayment + (daysWorked - 25) * 1000);
