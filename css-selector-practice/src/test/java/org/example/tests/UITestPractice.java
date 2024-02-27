@@ -61,5 +61,10 @@ public class UITestPractice {
         WebElement dynamicMessage = driver.findElement(By.cssSelector("#dynamicClickMessage"));
         System.out.println(dynamicMessage.getText());
     }
+    @AfterTest
+    public void tearDown() {
+        // Close the browser
+        driver.quit();
+    }
 
 }
