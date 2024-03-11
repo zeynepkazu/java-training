@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -11,9 +12,13 @@ public class SelenideTest {
     public void printDynamicMessageTest() {
         open("https://demoqa.com/elements");
         assertThat("https://demoqa.com/elements");
-        $(byId("item-4")).click();
+
+        SelenideElement buttonsButton = $(byId("item-4"));
+        buttonsButton.click();
         assertThat("https://demoqa.com/buttons");
-        $(byCssSelector(".col-md-6 div:nth-of-type(3) > .btn")).scrollTo().click();
+
+        SelenideElement clickMeButton = $(byCssSelector(".col-md-6 div:nth-of-type(3) > .btn"));
+        clickMeButton.scrollTo().click();
         System.out.println($(byId("dynamicClickMessage")).getText());
     }
 
