@@ -15,8 +15,8 @@ import java.net.MalformedURLException;
 public class UITestPractice {
     public static WebDriver driver;
     Driver webDriver = new Driver();
-    PropertyManager propertyManager= new PropertyManager();
-    String url =propertyManager.getProperty("APP_URL");
+    PropertyManager propertyManager = new PropertyManager();
+    String url = propertyManager.getProperty("APP_URL");
 
     // class with the method to use in case web elements overlap.
     public class ScrollToElement {

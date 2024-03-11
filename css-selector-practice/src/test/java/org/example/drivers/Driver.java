@@ -19,7 +19,7 @@ public class Driver {
         webDriver = DriverFactory.getDriver();
 
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
-        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(500));
         webDriver.manage().window().maximize();
 
         return webDriver;
