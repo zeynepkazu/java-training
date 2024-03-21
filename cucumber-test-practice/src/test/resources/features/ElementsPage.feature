@@ -1,4 +1,4 @@
-Feature: Verify clicking on the "Click Me" button in the Buttons section of demoqa.com and see the dynamic message
+Feature: As a user I want to click buttons on the Buttons section of the Elements page
 
   Scenario: Click on "Click Me" button and read the message
     Given I open the elements page
