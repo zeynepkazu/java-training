@@ -6,4 +6,3 @@ Feature: As a user I want to add and edit entries in the web table on Web tables
     Then I should see the newly added record in the table
     When I edit the added record
     Then I should see the edited record in the table
-

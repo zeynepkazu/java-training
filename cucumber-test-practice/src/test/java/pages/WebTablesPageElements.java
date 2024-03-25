@@ -2,11 +2,9 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byCssSelector;
-import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.$;
 
-public class PageElements {
+public class WebTablesPageElements {
 
         //Form fields
         protected SelenideElement addNewRecordButton = $("#addNewRecordButton");

@@ -5,12 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.annotations.*;
-import pages.PageElements;
+import pages.WebTablesPageElements;
 
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PageSteps extends PageElements {
+public class WebTablesPageSteps extends WebTablesPageElements {
 
     @Given("I open the web tables page")
     public void navigateAndAssert () {
